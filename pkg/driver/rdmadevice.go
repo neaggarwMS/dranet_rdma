@@ -86,7 +86,7 @@ func getRdmaDeviceFromNetdev(ifName string) (string, error) {
 	var rdmaDev string
 	if rdmaDev, _ := rdmamap.GetRdmaDeviceForNetdevice(ifName); rdmaDev == "" {
 
-		//Fallback to sysfs check if rdmamap fails. This is particularly related to a known
+		// Fallback to sysfs check if rdmamap fails. This is particularly related to a known
 		// issue to detect RDMA devices for certain Mellanox NICs
 		// https://github.com/Mellanox/rdmamap/issues/15
 
